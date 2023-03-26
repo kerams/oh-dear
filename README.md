@@ -3,6 +3,23 @@
 BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22621.1413/22H2/2022Update/SunValley2)
 AMD Ryzen 9 7900, 1 CPU, 24 logical and 12 physical cores
 .NET SDK=8.0.100-preview.2.23157.25
+  [Host]     : .NET 8.0.0 (8.0.23.12803), X64 RyuJIT AVX2 DEBUG
+  DefaultJob : .NET 8.0.0 (8.0.23.12803), X64 RyuJIT AVX2
+
+
+```
+|  Method |      Mean |     Error |    StdDev |   Gen0 | Allocated |
+|-------- |----------:|----------:|----------:|-------:|----------:|
+|  Option | 2.0639 ns | 0.0204 ns | 0.0171 ns | 0.0014 |      24 B |
+| Voption | 3.0861 ns | 0.0381 ns | 0.0337 ns |      - |         - |
+|  Result | 0.2330 ns | 0.0071 ns | 0.0063 ns |      - |         - |
+
+ 
+ ``` ini
+
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22621.1413/22H2/2022Update/SunValley2)
+AMD Ryzen 9 7900, 1 CPU, 24 logical and 12 physical cores
+.NET SDK=8.0.100-preview.2.23157.25
   [Host]     : .NET 7.0.3 (7.0.323.6910), X64 RyuJIT AVX2 DEBUG
   DefaultJob : .NET 7.0.3 (7.0.323.6910), X64 RyuJIT AVX2
 
