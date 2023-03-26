@@ -68,6 +68,22 @@ Intel Core i7-10700 CPU 2.90GHz, 1 CPU, 16 logical and 8 physical cores
 
 ```ini
 
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22621.1413/22H2/2022Update/SunValley2)
+12th Gen Intel Core i9-12900F, 1 CPU, 24 logical and 16 physical cores
+.NET SDK=7.0.201
+  [Host]     : .NET 6.0.13 (6.0.1322.58009), X64 RyuJIT AVX2 DEBUG
+  DefaultJob : .NET 6.0.13 (6.0.1322.58009), X64 RyuJIT AVX2
+
+
+```
+|  Method |      Mean |     Error |    StdDev |   Gen0 | Allocated |
+|-------- |----------:|----------:|----------:|-------:|----------:|
+|  Option | 1.2152 ns | 0.0623 ns | 0.0667 ns | 0.0015 |      24 B |
+| Voption | 2.5989 ns | 0.0311 ns | 0.0291 ns |      - |         - |
+|  Result | 0.1002 ns | 0.0129 ns | 0.0114 ns |      - |         - |
+
+```ini
+
 BenchmarkDotNet=v0.13.5, OS=macOS Monterey 12.6.1 (21G217) [Darwin 21.6.0]
 Intel Core i7-4870HQ CPU 2.50GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 .NET SDK=7.0.202
